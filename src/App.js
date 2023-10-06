@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { simulateAsyncApiCall } from "./api/dataService";
 import Container from "@mui/material/Container";
 import AllTransactions from "./components/AllTransactions";
-import MonthlyRewardPoints from "./components/MonthlyRewardPoints";
-import TotalRewardPoints from "./components/TotalRewardPoints";
+import MonthlyAwardedPoints from "./components/MonthlyAwardedPoints";
+import TotallyAwardedPoints from "./components/TotallyAwardedPoints";
 
 const calcPoint = (amount) => {
   let points = 0;
@@ -44,8 +44,8 @@ function App() {
     <div className="App">
       <Container fixed>
         <AllTransactions transactions={transactions} loading={loading} />
-        <MonthlyRewardPoints transactions={transactions} loading={loading} />
-        <TotalRewardPoints transactions={transactions} loading={loading} />
+        <MonthlyAwardedPoints transactions={transactions} loading={loading} />
+        <TotallyAwardedPoints transactions={transactions} loading={loading} />
       </Container>
     </div>
   );

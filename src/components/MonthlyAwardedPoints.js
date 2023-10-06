@@ -1,7 +1,7 @@
 import DataTable from "./DataTable";
 import { getMonthyData } from "../utils";
 
-const MonthlyRewardPoints = ({ transactions, loading }) => {
+const MonthlyAwardedPoints = ({ transactions, loading }) => {
   const columns = [
     { field: "name", headerName: "Customer Name", width: 200 },
     { field: "email", headerName: "Customer Email", width: 230 },
@@ -39,7 +39,7 @@ const MonthlyRewardPoints = ({ transactions, loading }) => {
 
   return (
     <DataTable
-      header="Monthly Reward Points By Customer"
+      header="Monthly Awarded Points By Customer"
       columns={columns}
       rows={rows}
       pageSize={5}
@@ -49,4 +49,4 @@ const MonthlyRewardPoints = ({ transactions, loading }) => {
   );
 };
 
-export default MonthlyRewardPoints;
+export default MonthlyAwardedPoints;

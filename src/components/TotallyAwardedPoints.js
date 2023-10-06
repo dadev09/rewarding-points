@@ -1,7 +1,7 @@
 import DataTable from "./DataTable";
 import { getTotalData } from "../utils";
 
-const TotalRewardPoints = ({ transactions, loading }) => {
+const TotallyAwardedPoints = ({ transactions, loading }) => {
   const columns = [
     { field: "name", headerName: "Customer Name", width: 200 },
     { field: "email", headerName: "Customer Email", width: 230 },
@@ -35,7 +35,7 @@ const TotalRewardPoints = ({ transactions, loading }) => {
 
   return (
     <DataTable
-      header="Total Reward Points By Customer"
+      header="Totally Awarded Points By Customer"
       columns={columns}
       rows={rows}
       pageSize={5}
@@ -45,4 +45,4 @@ const TotalRewardPoints = ({ transactions, loading }) => {
   );
 };
 
-export default TotalRewardPoints;
+export default TotallyAwardedPoints;
